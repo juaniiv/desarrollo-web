@@ -1,0 +1,34 @@
+/* PAGINA 4 */
+  
+.carousel-item {
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .carousel-item-next, .carousel-item-prev, .carousel-item.active, .carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
+    transform: translateX(0);
+  }
+  
+  .carousel-item-next, .active.carousel-item-right {
+    transform: translateX(100%);
+  }
+  
+  .carousel-item-prev, .active.carousel-item-left {
+    transform: translateX(-100%);
+  }
+  
+  .carousel-caption {
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    h5 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  
+  .textoblanco {
+    color: #fff;
+    font-size: 1.5rem;
+  }

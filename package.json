@@ -1,0 +1,15 @@
+{
+  "name": "yrn-agency",
+  "version": "1.0.1",
+  "description": "este proyecto es sobre una agencia de autos, para realizar el mismo estoy utilizando: HTML, CSS, SASS, SCSS.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.4.0"
+  },
+  "keywords": [],
+  "author": "Juan Ignacio Vazquez",
+  "license": "ISC"
+}
