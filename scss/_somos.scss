@@ -1,0 +1,44 @@
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 40px;
+  border: 2px solid #9c27b0;
+  color: #fff;
+  text-decoration: none;
+  background: #9c27b0;
+}
+
+.btn:hover {
+  background: none;
+}
+
+.content {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .YRN {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+  }
+}
+
+.sau {
+  padding: 30px;
+  background: #1f1d1d;
+}
+
+.about {
+  background: #171717;
+}
