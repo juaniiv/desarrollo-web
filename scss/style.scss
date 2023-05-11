@@ -29,7 +29,6 @@ $z-index-navbar: 1000;
 
 * {
   margin: 0;
-  overflow-x: hidden;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -298,7 +297,7 @@ $z-index-navbar: 1000;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
   transition-property: transform;
-  overflow: hidden;
+  
   
   &:hover,
   &:focus,

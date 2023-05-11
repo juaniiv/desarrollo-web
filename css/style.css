@@ -88,7 +88,6 @@
 
 * {
   margin: 0;
-  overflow-x: hidden;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -280,7 +279,6 @@
 
 * {
   margin: 0;
-  overflow-x: hidden;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -511,7 +509,7 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
   transition-property: transform;
-  overflow: hidden;
+  
 }
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
   transform: scale(1.1);
