@@ -4,7 +4,7 @@
   "description": "este proyecto es sobre una agencia de autos, para realizar el mismo estoy utilizando: HTML, CSS, SASS, SCSS.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss:css"
+    "compile:scss": "sass scss/style.scss css/style.css"
   },
   "dependencies": {
     "bootstrap": "^5.4.0"

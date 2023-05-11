@@ -42,9 +42,11 @@
     padding: 25px;
   }
   
-  .email-contact {
+  .email.contact {
     padding: 25px;
     margin-top: 5%;
-    font-size: larger;
-    font-weight: 800;
+    p{
+    font-size: 0.2rem;
+    font-weight: 200;
+  }
   }

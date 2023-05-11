@@ -1,3 +1,32 @@
+// Variables
+$color-primary: #9c27b0;
+$color-secondary: #333;
+$color-white: #fff;
+$color-black: #000;
+
+$font-family: "Times New Roman", Times, serif;
+
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+
+$z-index-navbar: 1000;
+
+
+@import 'variables';
+@import'contactanos';
+@import 'footer';
+@import 'generales';
+@import 'index';
+@import 'navbar';
+@import 'nuevo-vehiculo';
+@import 'productos';
+@import 'somos';
+
 * {
   margin: 0;
   overflow-x: hidden;
@@ -8,7 +37,7 @@
 
 /* Menú de navegación */
 .container-fluid {
-  background-color: #000000;
+  background-color: $color-black;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -18,7 +47,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: $z-index-navbar;
 
   .navbar-nav {
     list-style: none;
@@ -26,17 +55,17 @@
     margin: 0;
 
     .nav-item {
-      margin-right: 20px;
+      margin-right:$color-white ;
       cursor: pointer;
 
       .nav-link {
-        color: #fff;
+        color: $color-white;
         text-decoration: none;
         font-weight: bold;
         font-size: large;
       }
       .navbar-toggler-icon{
-        color: #fff;
+        color: $color-white;
       }
       
     }
@@ -69,27 +98,27 @@
   position: absolute;
   top: 15%;
   left: 10%;
-  color: #fff;
+  color: $color-white;
   text-align: left;
-  text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+  text-shadow: 1px 1px 1px $color-black, -1px -1px 1px $color-black;
   background-color: rgba(255, 255, 255, 0.01);
 
   h2 {
     font-size: 2.2rem;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000;
+    margin-bottom: $spacing-medium;
+    text-shadow: 1px 1px 1px $color-black, -1px -1px 1px $color-black;
   }
 
   p {
     font-size: 1.22rem;
-    margin-bottom: 20px;
+    margin-bottom: $spacing-medium;
   }
 
   input[type="button"] {
-    background-color: #fff;
-    color: #333;
-    padding: 15px 20px;
-    border: black;
+    background-color: $color-white;
+    color: $color-secondary;
+    padding: 15px $spacing-medium;
+    border: $color-black;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -101,11 +130,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
-  color: #fff;
-  padding: 20px;
-  height: 70px;
-  overflow-y: hidden;
+  background-color: $color-black000;
+  color: $color-white;
+  padding: $spacing-medium;
 
   ul {
     display: flex;
@@ -114,10 +141,10 @@
     padding: 0;
 
     li {
-      margin-right: 10px;
+      margin-right: $spacing-small;
 
       a {
-        color: #fff;
+        color: $color-white;
         text-decoration: none;
 
         &:hover {
@@ -128,8 +155,8 @@
   }
 
   img {
-    width: 60px;
-    height: 70px;
+    width: 50px;
+    height: 60px;
   }
 
   h4 {
@@ -140,7 +167,6 @@
     font-size: larger;
     margin-top: 1%;
   }
-}
 
 /********************** PAGINA 2 *******************************/
 .pagina-2 {
@@ -176,11 +202,11 @@
   .btn {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 40px;
-      border: 2px solid #9c27b0;
-      color: #fff;
+      padding: $spacing-small 40px;
+      border: 2px solid $color-primary;
+      color: $color-white;
       text-decoration: none;
-      background: #9c27b0;
+      background: $color-primary;
   }
   
   .btn:hover {
@@ -199,19 +225,19 @@
         font-size: 60px;
         font-weight: 600;
         text-transform: uppercase;
-        color: #fff;
+        color: $color-white;
     }
     
     p {
         margin-bottom: 40px;
         font-size: 18px;
-        color: #fff;
+        color: $color-white;
         padding: 0 100px;
     }
   }
   
   .sau {
-      padding: 30px;
+      padding: $spacing-large;
       background: #1f1d1d
   }
   
@@ -256,15 +282,15 @@
       font-weight: bold;
     }
   }
-  textoblanco {
-  color: #fff;
+  ttexto-3slide {
+  color: $color-white;
   font-size: 1.5rem;
   }
   }
   
     /* PAGINA 5 */
 .hvr-grow {
-  color: #000;
+  color: $color-black;
   margin-top: 1%;
   display: inline-block;
   vertical-align: middle;
@@ -293,13 +319,16 @@
   .title {
   padding: 25px;
   margin-top: 7%;
-  }
+  font-size: 1rem;
   
-  .email-contact {
+}
+  
+  .email.contact {
   padding: 25px;
   margin-top: 5%;
-  font-weight: 800;
-  font-size: 1rem;
+  p{
+  font-weight: 200;
+  font-size: 0.2rem;
   }
   }
   
@@ -335,15 +364,15 @@
     }
     ul {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: $spacing-medium;
     }
     li {
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-bottom: $spacing-small;
     }
     .icono {
       display: block;
-      margin: 20px auto 0;
+      margin: $spacing-medium auto 0;
       text-align: center;
     }
   }
@@ -357,7 +386,7 @@
   
     li {
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-bottom: $spacing-small;
     }
   
     h4 {
@@ -366,11 +395,6 @@
   
     p {
       font-size: smaller;
-    }
-  
-    img {
-      height: 12px;
-      width: 12px;
     }
   
     @include mobile {
@@ -382,7 +406,7 @@
   
       li {
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: $spacing-small;
       }
   
       h4 {
@@ -399,4 +423,5 @@
       }
     }
   }
-  
+  }
+}
