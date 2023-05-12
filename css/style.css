@@ -12,7 +12,6 @@
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
-  overflow: hidden;
 }
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
   -webkit-transform: scale(1.1);
@@ -22,31 +21,25 @@
 .pagina-5 {
   background-color: #F4EEE0;
 }
-
-.formulario {
-  height: 675px;
-  max-width: max-content;
-  padding: 25px;
-  margin-bottom: 7%;
-}
-
-.title {
-  padding: 25px;
-}
-
-.formulario {
+.pagina-5 .formulario {
   height: 675px;
   max-width: max-content;
   padding: 25px;
 }
-
-.email-contact {
+.pagina-5 .title {
+  padding: 25px;
+  margin-top: 7%;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.pagina-5 .email.contact {
   padding: 25px;
   margin-top: 5%;
 }
-.email-contact p {
-  font-size: 0.2rem;
+.pagina-5 .email.contact p {
   font-weight: 200;
+  font-size: 0.2rem;
+  margin-top: 10px;
 }
 
 /* Footer */
@@ -268,7 +261,7 @@
   padding: 0 100px;
 }
 
-.sau, .pagina-5 .menu {
+.sau, .redes-sociales .menu {
   padding: 30px;
   background: #1f1d1d;
 }
@@ -285,7 +278,7 @@
 /******************************* INDEX.HTML **********************************/
 /* Menú de navegación */
 .container-fluid {
-  background-color: #000000;
+  background-color: #000;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -304,7 +297,7 @@
   margin: 0;
 }
 .container-fluid .navbar-nav .nav-item {
-  margin-right: 20px;
+  margin-right: #fff;
   cursor: pointer;
 }
 .container-fluid .navbar-nav .nav-item .nav-link {
@@ -328,11 +321,11 @@
 }
 
 /* Imagen de fondo */
-.pagina-1 {
+.imgf1 {
   background-image: url("../img/r35.jpg");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 /* Subtitulo y texto */
@@ -358,18 +351,25 @@
   background-color: #fff;
   color: #333;
   padding: 15px 20px;
-  border: black;
+  border: #000;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
 }
 
 /* Footer */
+
+  /********************** PAGINA 2 *******************************/
+  /* ********* PAGINA 3 ********** */
+  /* PAGINA 4 */
+  /* PAGINA 5 */
+  /* MEDIA QUERIS */
+
 .redes-sociales footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   padding: 20px;
 }
@@ -399,34 +399,32 @@
 .redes-sociales footer p {
   font-size: larger;
   margin-top: 1%;
+  margin-right: 220px;
 }
-
-/********************** PAGINA 2 *******************************/
-.pagina-2 {
+.redes-sociales .pagina-2 {
   background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
-
-.container {
+.redes-sociales .container {
   margin-top: 8%;
   margin-bottom: 3%;
+  width: 100%;
+  overflow: hidden;
 }
-.container .card {
-  width: 200px;
-  height: 400px;
+.redes-sociales .container .card {
+  width: 100%;
+  height: 100%;
   margin-bottom: 3rem;
   cursor: pointer;
   background-color: #F4EEE0;
   border: none;
 }
-.container .card-body {
+.redes-sociales .container .card-body {
   border: black;
 }
-.container .card-img {
-  height: 270px;
+.redes-sociales .container .card-img {
+  width: 100%;
 }
-
-/* ********* PAGINA 3 ********** */
-.btn {
+.redes-sociales .btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 40px;
@@ -435,72 +433,64 @@
   text-decoration: none;
   background: #9c27b0;
 }
-
-.btn:hover {
+.redes-sociales .btn:hover {
   background: none;
 }
-
-.content {
+.redes-sociales .content {
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.content .YRN {
+.redes-sociales .content .YRN {
   margin-bottom: 40px;
   font-size: 60px;
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
 }
-.content p {
+.redes-sociales .content p {
   margin-bottom: 40px;
   font-size: 18px;
   color: #fff;
   padding: 0 100px;
 }
-
-.sau, .pagina-5 .menu {
+.redes-sociales .sau, .redes-sociales .menu {
   padding: 30px;
   background: #1f1d1d;
 }
-
-.about {
+.redes-sociales .about {
   background: #171717;
 }
-
-/* PAGINA 4 */
-.carousel-item {
+.redes-sociales .carousel-item {
   transition: transform 0.1s ease-in-out;
 }
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+.redes-sociales .carousel-item-next, .redes-sociales .carousel-item-prev, .redes-sociales .carousel-item.active {
   transform: translateX(0);
 }
-.carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
+.redes-sociales .carousel-item-next.carousel-item-left, .redes-sociales .carousel-item-prev.carousel-item-right {
   transform: translateX(0);
 }
-.carousel-item-next, .carousel-item.active.carousel-item-right {
+.redes-sociales .carousel-item-next, .redes-sociales .carousel-item.active.carousel-item-right {
   transform: translateX(100%);
 }
-.carousel-item-prev, .carousel-item.active.carousel-item-left {
+.redes-sociales .carousel-item-prev, .redes-sociales .carousel-item.active.carousel-item-left {
   transform: translateX(-100%);
 }
-.carousel-item-caption p {
+.redes-sociales .carousel-item-caption p {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.carousel-item-caption h1 {
+.redes-sociales .carousel-item-caption h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-.carousel-item textoblanco {
+.redes-sociales .carousel-item ttexto-3slide {
   color: #fff;
   font-size: 1.5rem;
 }
-
-/* PAGINA 5 */
-.hvr-grow {
+.redes-sociales .hvr-grow {
   color: #000;
   margin-top: 1%;
   display: inline-block;
@@ -509,108 +499,136 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
   transition-property: transform;
-  
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+.redes-sociales .hvr-grow:hover, .redes-sociales .hvr-grow:focus, .redes-sociales .hvr-grow:active {
   transform: scale(1.1);
 }
-
-.pagina-5 {
+.redes-sociales .pagina-5 {
   background-color: #F4EEE0;
-  /* MEDIA QUERIS */
 }
-.pagina-5 .formulario {
+.redes-sociales .pagina-5 .formulario {
   height: 675px;
   max-width: max-content;
   padding: 25px;
 }
-.pagina-5 .title {
+.redes-sociales .pagina-5 .title {
   padding: 25px;
   margin-top: 7%;
-  font-size: 5rem;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
-.pagina-5 .email-contact {
+.redes-sociales .pagina-5 .email.contact {
   padding: 25px;
   margin-top: 5%;
 }
-.pagina-5 .email-contact p {
+.redes-sociales .pagina-5 .email.contact p {
   font-weight: 200;
-  font-size: 0, 2rem;
+  font-size: 0.2rem;
+  margin-top: 10px;
 }
-.pagina-5 .title {
+.redes-sociales .title {
   margin-bottom: 0;
   font-size: 40px;
 }
 @media (max-width: 768px) {
-  .pagina-5 .title {
+  .redes-sociales .title {
     margin-bottom: 0;
     font-size: 40px;
   }
 }
-.pagina-5 .sau, .pagina-5 .menu {
+.redes-sociales .sau, .redes-sociales .menu {
   height: 100vh;
 }
 @media (max-width: 768px) {
-  .pagina-5 .sau, .pagina-5 .menu {
+  .redes-sociales .sau, .redes-sociales .menu {
     height: 100vh;
   }
 }
-.pagina-5 .menu nav {
+.redes-sociales .menu nav {
   flex-direction: column;
 }
-.pagina-5 .menu ul {
+.redes-sociales .menu ul {
   display: inline-block;
   margin-top: 20px;
 }
-.pagina-5 .menu li {
+.redes-sociales .menu li {
   margin-right: 0;
   margin-bottom: 10px;
 }
-.pagina-5 .menu .icono {
+.redes-sociales .menu .icono {
   display: block;
   margin: 20px auto 0;
   text-align: center;
 }
-.pagina-5 .redes-sociales {
-  flex-wrap: wrap;
-}
-.pagina-5 .redes-sociales ul {
-  flex-wrap: wrap;
-}
-.pagina-5 .redes-sociales li {
-  margin-right: 0;
-  margin-bottom: 10px;
-}
-.pagina-5 .redes-sociales h4 {
-  font-size: small;
-}
-.pagina-5 .redes-sociales p {
-  font-size: smaller;
-}
-.pagina-5 .redes-sociales img {
-  height: 12px;
-  width: 12px;
-}
 @media (max-width: 768px) {
-  .pagina-5 .redes-sociales {
-    flex-wrap: wrap;
+  .redes-sociales .redes-sociales {
+    flex-direction: column;
+    padding: 20px 10px;
+    position: fixed;
   }
-  .pagina-5 .redes-sociales ul {
+  .redes-sociales .redes-sociales ul {
     flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
   }
-  .pagina-5 .redes-sociales li {
+  .redes-sociales .redes-sociales ul li {
     margin-right: 0;
     margin-bottom: 10px;
+    display: inline-block;
   }
-  .pagina-5 .redes-sociales h4 {
-    font-size: small;
+  .redes-sociales .redes-sociales img {
+    width: 30px;
+    height: 40px;
   }
-  .pagina-5 .redes-sociales p {
-    font-size: smaller;
+}
+@media (max-width: 768px) {
+  .redes-sociales .pagina-4 p {
+    font-size: 0.5rem;
   }
-  .pagina-5 .redes-sociales img {
-    height: 12px;
-    width: 12px;
+  .redes-sociales .pagina-4 h1 {
+    font-size: 0.5rem;
+  }
+}
+.redes-sociales .pagina-4 .texto-3slide {
+  color: #fff;
+  font-size: 0.5rem;
+}
+@media (max-width: 768px) {
+  .navbar-collapse.collapse.show {
+    background-color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner h1 {
+    font-size: larger;
+    color: #fff;
+  }
+  .carousel-inner p {
+    font-size: 0.7rem;
+  }
+  .carousel-inner .carousel-item {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .carousel-caption {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .col-md-4 {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 130px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  /* Ajustes de estilos para 768px */
+  body {
+    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
   }
 }
 
