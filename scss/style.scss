@@ -346,6 +346,12 @@ $z-index-navbar: 1000;
       @content;
     }
   }
+  @media (max-width: 768px) {
+    .navbar .logo {
+      display: none;
+    }
+  }
+  
   
   .title {
     margin-bottom: 0;
@@ -424,15 +430,8 @@ $z-index-navbar: 1000;
 color: $color-white;
 font-size: 0.5rem;
 }
-}
-
-@media (max-width: 768px) {
-  .navbar-collapse.collapse.show {
-    background-color: black;
-  }
-  
-  }
-}   
+} 
+  }  
 @media (max-width: 768px) {
   .carousel-inner {
     h1{
@@ -464,8 +463,100 @@ font-size: 0.5rem;
     }
     
     @media (max-width: 768px) {
-      /* Ajustes de estilos para 768px */
+      
       body {
-        overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+        overflow-x: hidden; 
       }
     }
+    .pagina-5 {
+      @media (max-width: 768px) {
+        
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+        }
+    
+        
+        .form-group {
+          margin-bottom: 20px;
+        }
+    
+        
+        .formulario {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+    
+        
+        .btn {
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          background-color: #333;
+          color: #fff;
+          cursor: pointer;
+        }
+    
+        
+        .btn-enviar {
+          background-color: #4caf50;
+        }
+    
+        .btn-reiniciar {
+          background-color: #f44336;
+        }
+      }
+      .form-group.provincia label {
+        text-align: left;
+    } 
+  }
+  .pagina-2 {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  
+  .container {
+    margin-top: 8%;
+    margin-bottom: 3%;
+    width: 100%;
+    overflow: hidden;
+    .card {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 3rem;
+      cursor: pointer;
+      background-color: #F4EEE0;
+      border: none;
+      
+      &-body {
+        border: black;
+      }
+      
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      overflow-x: auto;
+      white-space: nowrap;
+      
+      .card {
+        display: inline-block;
+        margin-right: 1rem;
+        vertical-align: top;
+        white-space: normal;
+        width: calc(100% - 1rem);
+      }
+    }
+  }
+  
