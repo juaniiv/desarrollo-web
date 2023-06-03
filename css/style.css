@@ -272,7 +272,7 @@
 
 * {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /******************************* INDEX.HTML **********************************/
@@ -358,13 +358,7 @@
 }
 
 /* Footer */
-.redes-sociales {
-  /********************** PAGINA 2 *******************************/
-  /* ********* PAGINA 3 ********** */
-  /* PAGINA 4 */
-  /* PAGINA 5 */
-  /* MEDIA QUERIS */
-}
+
 .redes-sociales footer {
   display: flex;
   justify-content: space-between;
