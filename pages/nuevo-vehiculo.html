@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,9 +14,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="icon" href="../img/logo-yrn 1 (1).png">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-
 </head>
 <body class="pagina-3">
+
+  <!--MENU DE NAVEGACION-->
+
   <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -49,20 +50,11 @@
       </div>
     </div>
   </nav>
-  <style>
-    @media (max-width: 768px) {
-      .navbar-collapse.collapse.show {
-        background-color: black;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 9999;
-      }
-    }
-    </style>
     </header>
   </div>
+
+  <!--CARROUSEL-->
+
   <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -71,21 +63,27 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="../img/1-slide.jpg" class="d-block w-100" alt="Ferrari Purosangue en la ruta">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="../img/1-slide.jpg" class="d-block w-100" alt="Ferrari Purosangue en la ruta">
+        </div>
+        <div class="carousel-caption d-md-block">
           <h1>Ferrari Purosangue</h1>
           <p>Llega el SUV que revolucionó el mercado, nuevo Ferrari Purosangue.</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="2000">
-        <img src="../img/second-slide.jpg" class="d-block w-100" alt="Ferrari Purosangue estacionado">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="../img/second-slide.jpg" class="d-block w-100" alt="Ferrari Purosangue estacionado">
+        </div>
+        <div class="carousel-caption d-md-block">
           <p>La arquitectura del coche hace honor al término "Purosangue" con un exterior atlético y aerodinámico, que lo distingue de los coches de cuatro puertas y cuatro plazas del mercado, junto con un habitáculo lujoso, cómodo y muy espacioso. No es solo un coche increíblemente rápido y ágil, sino que también es el primer Ferrari de cuatro plazas, cuya amplitud permite un confort excepcional para todos los ocupantes.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../img/3-slide.jpg" class="d-block w-100" alt="Motor del Ferrari Purosangue">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="../img/3-slide.jpg" class="d-block w-100" alt="Motor del Ferrari Purosangue">
+        </div>
+        <div class="carousel-caption d-md-block">
           <p id="texto-3slide" class="textoblanco">El Ferrari Purosangue es el único coche de proporciones similares que adopta un V12 atmosférico. El propulsor más icónico de la marca de Maranello debuta en una configuración inédita que permite al coche ofrecer la mayor potencia del segmento (725 CV), además de su inconfundible y adictivo sonido.</p>
         </div>
       </div>
@@ -96,13 +94,10 @@
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually">
-  
+      <span class="visually-hidden">Next</span>
     </button>
   </div>
-
-  </div>
-  <div class="redes-sociales">
+  
     <footer>
       <h4>Copyright-Todos Los Derechos Reservados</h4>
       <p>SEGUINOS EN TODAS NUESTRAS REDES</p>
@@ -115,7 +110,6 @@
               alt="Facebook"></a></li>
       </ul>
     </footer>
-  </div>
 </body>
 
 </html>

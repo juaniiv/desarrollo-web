@@ -33,7 +33,9 @@ $z-index-navbar: 1000;
 }
 
 /******************************* INDEX.HTML **********************************/
-
+.pagina-1{
+  overflow-x: hidden;
+}
 /* Menú de navegación */
 .container-fluid {
   background-color: $color-black;
@@ -70,27 +72,24 @@ $z-index-navbar: 1000;
     }
   }
 
-  /* ICONO */
-  .icono {
-    position: absolute;
-    left: 50%;
-    top: 15%;
-  }
-
   .logo img {
     width: 70px;
     height: 60px;
-    margin-left: 200px;
+    margin-left: 270px;
   }
 }
 
 /* Imagen de fondo */
-.imgf1{
+.imgf1 {
   background-image: url("../img/r35.jpg");
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  background-position: center center;
+  width: 100vw; 
+  height: 100vh; 
 }
+
+
 
 /* Subtitulo y texto */
 .main-text {
@@ -125,7 +124,7 @@ $z-index-navbar: 1000;
 }
 
 /* Footer */
-.redes-sociales {
+
   footer {
     display: flex;
     justify-content: space-between;
@@ -133,6 +132,7 @@ $z-index-navbar: 1000;
     background-color: $color-black;
     color: $color-white;
     padding: $spacing-medium;
+    width: 100%;
 
     ul {
       display: flex;
@@ -176,34 +176,31 @@ $z-index-navbar: 1000;
 }
 
 .container {
-  margin-top: 8%;
-  margin-bottom: 3%;
-  width: 100%;
-  overflow: hidden;
-  .card {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 3rem;
-    cursor: pointer;
-    background-color: #F4EEE0;
-    border: none;
-    
-    &-body {
-    border: black;
-    }
-    
-    &-img {
-    width: 100%;
-    }
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+  .col-md-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
   }
+}
+  .title-productos {
+    color: white;
+     position: absolute;
+     top: 10%;
+     left: 44%;
+     font-size: larger;
+  }
+  
 
 
     
     /* ********* PAGINA 3 ********** */
 
   
-  .btn {
+    .btn {
       display: inline-block;
       margin-top: 15px;
       padding: $spacing-small 40px;
@@ -252,45 +249,28 @@ $z-index-navbar: 1000;
   }
   
     /* PAGINA 4 */
-    .carousel-item {
-    transition: transform 0.1s ease-in-out;
     
-    &-next,
-    &-prev,
-    &.active {
-    transform: translateX(0);
-    }
+      .-caption {
+        p {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        h1 {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
     
-    &-next.carousel-item-left,
-    &-prev.carousel-item-right {
-    transform: translateX(0);
-    }
+      .ttexto-3slide {
+        color: $color-white;
+        font-size: 1.5rem;
+      }
     
-    &-next,
-    &.active.carousel-item-right {
-    transform: translateX(100%);
-    }
+      img {
+        width: 100%; 
+        height: 100vh;  
+      }
     
-    &-prev,
-    &.active.carousel-item-left {
-    transform: translateX(-100%);
-    }
-    
-    &-caption {
-    p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    }
-    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-  }
-  ttexto-3slide {
-  color: $color-white;
-  font-size: 1.5rem;
-  }
-  }
   
     /* PAGINA 5 */
 .hvr-grow {
@@ -327,236 +307,230 @@ $z-index-navbar: 1000;
       margin-bottom: 20px; 
     }
   
-    .email.contact {
+    .parrafo {
       padding: 25px;
-      margin-top: 5%;
-  
-      p {
+      margin-left: 3px;
         font-weight: 200;
-        font-size: 0.2rem;
-        margin-top: 10px; 
+        font-size: 1.3rem;
       }
     }
-  }
+  
   
   
   /* MEDIA QUERIS */
-  @mixin mobile {
-    @media (max-width: 768px) {
-      @content;
-    }
-  }
-  @media (max-width: 768px) {
-    .navbar .logo {
-      display: none;
-    }
-  }
-  
-  
-  .title {
-    margin-bottom: 0;
-    font-size: 40px;
-  
-    @include mobile {
-      margin-bottom: 0;
-      font-size: 40px;
-    }
-  }
-  
-  .sau {
-    height: 100vh;
-  
-    @include mobile {
-      height: 100vh;
-    }
-  }
-  
-  .menu {
-    @extend .sau;
-    nav {
-      flex-direction: column;
-    }
-    ul {
-      display: inline-block;
-      margin-top: $spacing-medium;
-    }
-    li {
-      margin-right: 0;
-      margin-bottom: $spacing-small;
-    }
-    .icono {
-      display: block;
-      margin: $spacing-medium auto 0;
-      text-align: center;
-    }
-  }
-  .redes-sociales{
-    @media (max-width: 768px) {
-      flex-direction: column;
-      padding: $spacing-medium $spacing-small;
+
+  /**NAVBAR*/
+  @media (max-width: 576px) {
+    .navbar-toggler {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       position: fixed;
-  
-      ul {
-        flex-wrap: wrap;
-        justify-content: center; 
-        margin-bottom: $spacing-medium;
-  
-        li {
-          margin-right: 0; 
-          margin-bottom: $spacing-small;
-          display: inline-block;
-        }
-      }
-  
-      img {
-        width: 30px;
-        height: 40px;
-      }
-    }
-  }
-  
-.pagina-4{
-@media (max-width: 768px) {
-  p {
-    font-size: 0.5rem; 
-  }
-
-  h1 {
-    font-size: 0.5rem; 
-  }
-}
-
-.texto-3slide {
-color: $color-white;
-font-size: 0.5rem;
-}
-} 
-  }  
-@media (max-width: 768px) {
-  .carousel-inner {
-    h1{
-      font-size: larger;
-      color: $color-white;
-    }
-    p{
-      font-size: 0.7rem;
-    }
-    .carousel-item {
-      object-fit: cover;
-    height: 100%;
-    width: 100%;
-    }
-  }
-      .carousel-caption {
-        max-width: 90%;
-        margin: auto;
-      }
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 50px;
+      background-color: black;
+      padding: 0 10px;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
   
-    @media (max-width: 768px) {
-      .col-md-4 {
-        width: 100%;
-        margin-bottom: 15px;
-        margin-left: 130px;
-        margin-top: 15px;
-      }
+    .navbar-toggler-icon {
+      margin-right: 10px;
     }
-    
-    @media (max-width: 768px) {
-      
-      body {
-        overflow-x: hidden; 
-      }
-    }
-    .pagina-5 {
-      @media (max-width: 768px) {
-        
-        form {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-    
-        
-        input[type="text"],
-        input[type="email"],
-        textarea {
-          width: 100%;
-        }
-    
-        
-        .form-group {
-          margin-bottom: 20px;
-        }
-    
-        
-        .formulario {
-          max-width: 500px;
-          margin: 0 auto;
-        }
-    
-        
-        .btn {
-          padding: 10px 20px;
-          font-size: 16px;
-          border-radius: 5px;
-          background-color: #333;
-          color: #fff;
-          cursor: pointer;
-        }
-    
-        
-        .btn-enviar {
-          background-color: #4caf50;
-        }
-    
-        .btn-reiniciar {
-          background-color: #f44336;
-        }
-      }
-      .form-group.provincia label {
-        text-align: left;
-    } 
-  }
-  .pagina-2 {
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-  }
   
-  .container {
-    margin-top: 8%;
-    margin-bottom: 3%;
-    width: 100%;
-    overflow: hidden;
-    .card {
+    .navbar-nav {
+      position: fixed;
+      top: 50px;
+      left: 0;
       width: 100%;
       height: 100%;
-      margin-bottom: 3rem;
-      cursor: pointer;
-      background-color: #F4EEE0;
-      border: none;
-      
-      &-body {
-        border: black;
-      }
-      
-      &-img {
-        width: 100%;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      border: $color-black;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 20px;
+    }
+  
+    .navbar-nav .logo {
+      display: none; /* Oculta el logo en el menú desplegable */
+    }
+  
+    .navbar-nav .logo img {
+      max-width: 100%;
+      height: auto;
     }
   }
   
-  @media (max-width: 768px) {
-    .container {
-      overflow-x: auto;
-      white-space: nowrap;
-      
-      .card {
-        display: inline-block;
-        margin-right: 1rem;
-        vertical-align: top;
-        white-space: normal;
-        width: calc(100% - 1rem);
+  
+    /* Subtitulo y texto */
+    @media (max-width: 576px) {
+    .main-text {
+      h1{
+        font-size: large;
+      }
+      p{
+        font-size: medium;
       }
     }
+    }
+    /* Footer */
+    @media (max-width: 576px) {
+  footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-black;
+  color: $color-white;
+  padding: $spacing-medium;
+
+ul{
+  margin-right: 0%;
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+
+h4 {
+  font-size: smaller;
+}
+
+p {
+  font-size: smaller;
+  margin-left: 8%;
+  margin: 0%;
+}
+  }
+}
+    /* Página 2 */
+      
+    @media (max-width: 576px) {
+      .container {
+        overflow-x: hidden;
+        .col-md-4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: 100px;
+          margin-left: 60px;
+          
+        }
+      }
+      .title-productos{
+        position: absolute;
+        top: 10%;
+        left: 41%;
+      }
+    }
+    
+    
+    /* Página 3 */
+    @media (max-width: 576px) {
+    .btn {
+      margin-bottom: 25%;
+    }
+    .YRN {
+      margin-top: 25%;
+        font-size: 1rem;
+      
+      
+      p{
+        font-size: medium;
+      }
+      
+    }
+    .content{
+     p{
+      font-size: medium;
+      
+  }
+}
+}
+
+/* PAGINA 4 */
+@media (max-width: 576px) {
+.carousel-item {
+  transition: transform 0.1s ease-in-out;
+
+  &-next,
+  &-prev,
+  &.active {
+    transform: translateX(0);
+  }
+
+  &-next.carousel-item-left,
+  &-prev.carousel-item-right {
+    transform: translateX(0);
+  }
+
+  &-next,
+  &.active.carousel-item-right {
+    transform: translateX(100%);
+  }
+
+  &-prev,
+  &.active.carousel-item-left {
+    transform: translateX(-100%);
+  }
+
+  &-caption {
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .ttexto-3slide {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+}
+@media (max-width: 576px) {
+  .carousel-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 100vh; 
+    width: 100%;
   }
   
+  #carouselExampleDark.carousel {
+    height: 100vh; 
+  }
+  .carousel-caption {
+  h1{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  }
+  
+}

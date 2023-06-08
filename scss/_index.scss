@@ -1,10 +1,12 @@
-.pagina-1 {
-    background-image: url("../img/r35.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
+.imgf1 {
+  background-image: url("../img/r35.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw; 
+  height: 100vh; 
+}
+
   /* Subtitulo y texto */
   
   .main-text {
